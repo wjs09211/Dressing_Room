@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>虛擬試衣間</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="myCss.css" rel="stylesheet">
+        <link href="jquery-ui.min.css" rel="stylesheet">
+        <link href="jquery-ui.theme.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript" src="jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="jquery-ui.min.js"></script>
+        <script type="text/JavaScript" src="myScript.js"></script>
+        <script type="text/JavaScript" src="slider.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-6">
+                <p></p>
+            </div>
+            <div class="col-md-6">
+                456
+            </div>
+        </div>
+    </body>
+    <script>
+    $.ajax({
+      url: "img/clothes",
+      success: function(data){
+         $(data).find("a:contains(.png)").each(function(){
+            // will loop through 
+            var images = $(this).attr("href");
+            console.log(images);
+
+         });
+      }
+    });
+        
+    </script>
+</html>
